@@ -1,1 +1,10 @@
-
+def bush(req):
+	till_plot()
+	while num_items(Items.Wood) <= req:
+		if can_harvest():
+			harvest()
+		for x in range(get_world_size()):
+			move(East)
+			for y in range(get_world_size()):
+			  plant(Entities.Bush)
+				move(South)
